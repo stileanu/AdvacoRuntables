@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Cloud sandbox AdvacoSandbox",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "debugServer": 4711,
+            "tenant": "advaco.com",
+            "environmentType": "Sandbox",
+            "environmentName": "AdvacoSandbox",
+            //"environmentName": "AdvacoSandbox",
+            "schemaUpdateMode": "Synchronize",
+            //"schemaUpdateMode": "ForceSync",
+        }
+        ,
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "cloud  sandbox AdvacoSandboxDev2",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "debugServer": 4711,
+            "tenant": "advaco.com",
+            "environmentType": "Sandbox",
+            "environmentName": "AdvacoSandboxDev2",
+            //"environmentName": "AdvacoSandbox",
+            "schemaUpdateMode": "Synchronize",
+            //"schemaUpdateMode": "ForceSync",
+        }    
+    ]
+}
