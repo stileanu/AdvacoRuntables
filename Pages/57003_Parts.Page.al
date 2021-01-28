@@ -4,6 +4,8 @@ page 57003 "Parts Run"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Parts;
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -122,27 +124,6 @@ page 57003 "Parts Run"
 
             }
         }
-        area(Factboxes)
 
-        {
-
-
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
-            }
-        }
     }
 }

@@ -4,6 +4,8 @@ page 57002 "Status Run"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = Status;
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -76,19 +78,4 @@ page 57002 "Status Run"
         }
     }
 
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
-            }
-        }
-    }
 }

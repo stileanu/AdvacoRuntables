@@ -4,6 +4,8 @@ page 57006 "Outside Sales Rep Run"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Outside Sales Reps";
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -52,22 +54,6 @@ page 57006 "Outside Sales Rep Run"
                     ApplicationArea = All;
                 }
 
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
             }
         }
     }

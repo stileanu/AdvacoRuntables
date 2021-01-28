@@ -4,6 +4,8 @@ page 57001 "Work Order Detail Run"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = WorkOrderDetail;
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -720,22 +722,6 @@ page 57001 "Work Order Detail Run"
                     ApplicationArea = All;
                 }
 
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
             }
         }
     }

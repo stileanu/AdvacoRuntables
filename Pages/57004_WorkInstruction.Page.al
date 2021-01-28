@@ -4,6 +4,8 @@ page 57004 "Work Instruction Run"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = WorkInstructions;
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -60,22 +62,6 @@ page 57004 "Work Instruction Run"
                     ApplicationArea = All;
                 }
 
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
             }
         }
     }

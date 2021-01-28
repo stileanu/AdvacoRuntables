@@ -18,9 +18,44 @@ page 57010 "Table Selection Page"
                 {
                     ApplicationArea = All;
 
-                    trigger OnAssistEdit()
+                    trigger OnDrillDown()
                     begin
-                        TabViewCleanDataMgmt.ListTableData(Rec);
+                        //RunPages;
+                        //Page.Run(57000);
+                        case Rec."Object ID" of
+                            Database::WorkOrderMaster:
+                                Page.RunModal(57000);
+
+                            Database::WorkOrderDetail:
+                                Page.RunModal(57001);
+
+                            Database::Status:
+                                Page.RunModal(57002);
+
+                            Database::Parts:
+                                Page.RunModal(57003);
+
+                            Database::WorkInstructions:
+                                Page.RunModal(57004);
+
+                            Database::"Failure Codes":
+                                Page.RunModal(57005);
+
+                            Database::"Outside Sales Reps":
+                                Page.RunModal(57006);
+
+                            Database::"ADVACO Comment Line":
+                                Page.RunModal(57007);
+
+                            Database::FieldService:
+                                Page.RunModal(57008);
+
+                            Database::"Field Service Parts Shipment":
+                                Page.RunModal(57009);
+
+                            else
+                                Error('');
+                        end;
                     end;
                 }
                 field("Object Type"; Rec."Object Type")
@@ -41,10 +76,6 @@ page 57010 "Table Selection Page"
                 }
             }
         }
-        area(Factboxes)
-        {
-
-        }
     }
 
     actions
@@ -62,6 +93,64 @@ page 57010 "Table Selection Page"
             }
         }
     }
+
+    trigger OnOpenPage()
+    var
+        AccessControl: Record "Access Control";
+        Ok: Boolean;
+        User: Record User;
+        Permiss: Label 'SUPER';
+        SysFunctions: Codeunit systemFunctionalLibrary;
+        txtanswer: text;
+
+    begin
+        ///--! Permission level check code. 
+        User.Get(UserSecurityId);
+        Ok := true;
+        User.SetRange("User Security ID", User."User Security ID");
+
+        if not SysFunctions.getIfSingleRoleId(Permiss, txtAnswer) then
+            Error('Only SUPER user can open this page.');
+
+    end;
+
+    procedure RunPages()
+    begin
+        case Rec."Object ID" of
+            Database::WorkOrderMaster:
+                Page.RunModal(57000);
+
+            Database::WorkOrderDetail:
+                Page.RunModal(57001);
+
+            Database::Status:
+                Page.RunModal(57002);
+
+            Database::Parts:
+                Page.RunModal(57003);
+
+            Database::WorkInstructions:
+                Page.RunModal(57004);
+
+            Database::"Failure Codes":
+                Page.RunModal(57005);
+
+            Database::"Outside Sales Reps":
+                Page.RunModal(57006);
+
+            Database::"ADVACO Comment Line":
+                Page.RunModal(57007);
+
+            Database::FieldService:
+                Page.RunModal(57008);
+
+            Database::"Field Service Parts Shipment":
+                Page.RunModal(57009);
+
+            else
+                Error('');
+        end;
+    end;
 
     var
         TabViewCleanDataMgmt: Codeunit "Table Run Mgmt. Run";

@@ -4,6 +4,8 @@ page 57009 "Parts Service parts Shp. Run"
     ApplicationArea = All;
     UsageCategory = Lists;
     SourceTable = "Field Service Parts Shipment";
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -40,22 +42,6 @@ page 57009 "Parts Service parts Shp. Run"
                     ApplicationArea = All;
                 }
 
-            }
-        }
-    }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                ApplicationArea = All;
-
-                trigger OnAction();
-                begin
-
-                end;
             }
         }
     }
