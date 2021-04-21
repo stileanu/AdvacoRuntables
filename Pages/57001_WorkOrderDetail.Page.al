@@ -721,6 +721,10 @@ page 57001 "Work Order Detail Run"
                 {
                     ApplicationArea = All;
                 }
+                field("Shipping Processed"; Rec."Shipping Processed")
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }

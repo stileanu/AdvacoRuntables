@@ -7,6 +7,7 @@ page 57010 "Table Selection Page"
     UsageCategory = Lists;
     SourceTable = AllObjWithCaption;
     SourceTableView = WHERE("Object Type" = const(Table), "Object ID" = filter(50000 .. 50004 | 50009 | 50011 | 50016 | 50020 | 50021));
+    Editable = false;
 
     layout
     {
@@ -24,34 +25,34 @@ page 57010 "Table Selection Page"
                         //Page.Run(57000);
                         case Rec."Object ID" of
                             Database::WorkOrderMaster:
-                                Page.RunModal(57000);
+                                Page.Run(57000);
 
                             Database::WorkOrderDetail:
-                                Page.RunModal(57001);
+                                Page.Run(57001);
 
                             Database::Status:
-                                Page.RunModal(57002);
+                                Page.Run(57002);
 
                             Database::Parts:
-                                Page.RunModal(57003);
+                                Page.Run(57003);
 
                             Database::WorkInstructions:
-                                Page.RunModal(57004);
+                                Page.Run(57004);
 
                             Database::"Failure Codes":
-                                Page.RunModal(57005);
+                                Page.Run(57005);
 
                             Database::"Outside Sales Reps":
-                                Page.RunModal(57006);
+                                Page.Run(57006);
 
                             Database::"ADVACO Comment Line":
-                                Page.RunModal(57007);
+                                Page.Run(57007);
 
                             Database::FieldService:
-                                Page.RunModal(57008);
+                                Page.Run(57008);
 
                             Database::"Field Service Parts Shipment":
-                                Page.RunModal(57009);
+                                Page.Run(57009);
 
                             else
                                 Error('');
