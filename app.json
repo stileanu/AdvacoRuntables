@@ -2,7 +2,7 @@
   "id": "dcbd7fea-3e94-468c-91b3-c8f12c8aa114",
   "name": "AdvacoRunTables",
   "publisher": "Intelice Solutions, Inc.",
-  "version": "1.0.0.0",
+  "version": "1.0.0.3",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -15,12 +15,12 @@
       "id": "415f2a15-4737-4a86-a9b2-76ef24a8dd23",
       "publisher": "Intelice Solutions, Inc.",
       "name": "AdvacoExt",
-      "version": "1.0.0.0"
+      "version": "1.0.0.38"
     }
   ],
   "screenshots": [],
-  "platform": "17.0.0.0",
-  "application": "17.0.0.0",
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
   "idRanges": [
     {
       "from": 57000,
@@ -29,5 +29,5 @@
   ],
   "contextSensitiveHelpUrl": "https://AdvacoRunTables.com/help/",
   "showMyCode": true,
-  "runtime": "6.0"
+  "runtime": "7.0"
 }
